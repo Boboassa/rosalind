@@ -12,6 +12,8 @@
 
 #define BUFFER 1000
 
+int hamming(char string1[], char string2[]);
+
 int main( int argc, char *argv[])
 {
     /* only the file name with the input string should be present as argument */
@@ -39,16 +41,20 @@ int main( int argc, char *argv[])
 
     fclose( file );
 
-    int len = strlen(seq1);
+    printf( "%i\n", hamming(seq1, seq2));
+
+    return 0;
+}
+
+int hamming(char string1[], char string2[]) {
+    int len = strlen(string1);
     int count;
     for (int i=1; i < len; i++)
     {
         /* Check for different nucleotides */
-        if ( seq1[i] != seq2[i] ) {
+        if ( string1[i] != string2[i] ) {
             count++;
         }
     }
-    printf( "%i\n", count );
-
-    return 0;
+    return count;
 }
