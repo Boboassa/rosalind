@@ -1,6 +1,9 @@
 /*
- * The dataset is DNA, this program requires an RNA sequence:
- * run the dataset through the DNA to RNA converter first
+ * Rosalind Bioinformatics Stronghold Problem 8
+ * Translating RNA to protein
+ *
+ * INPUT:  RNA sequence <10000 nucleotides long
+ * OUTPUT: Aminoacid sequence translated from the RNA sequence
 */
 
 #include <stdio.h>
