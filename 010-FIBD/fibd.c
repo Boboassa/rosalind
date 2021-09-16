@@ -5,6 +5,10 @@
  * INPUT: 2 integers:
  * - k<6 number of rabbits produced by a mature couple of rabbits
  * - n<41 number of generations to compute
+ *
+ * This code doesn't work because it's too slow, each time the function
+ * runs the function is called recursively 3 times, for a huge number of 
+ * executions
 */
 
 #include <stdio.h>
