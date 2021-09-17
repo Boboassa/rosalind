@@ -55,7 +55,8 @@ int main(int argc, char *argv[])
     for (int i=0; i < (seqLen - subLen +1); i++)
     {
         /* For every character in the substring */
-        for (int j=0; j < (subLen); j++)
+        int j;
+        for (j=0; j < (subLen); j++)
         {
             /* Check if the characters are equal */
             if (sub[j] != seq[i+j])
@@ -63,13 +64,13 @@ int main(int argc, char *argv[])
                 /* Exit the loop */
                 break;
             }
-            /* If the characters are all equal including the last one */
-            else if ((subLen - 1) == j)
+        /* If the characters are all equal including the last one */
+        }
+            if (subLen == j)
             {
                 /* Print the number of the first character of the string */
                 printf("%i ", (i+1));
             }
-        }
     }
     printf("\n");
 
