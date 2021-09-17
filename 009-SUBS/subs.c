@@ -50,27 +50,21 @@ int main(int argc, char *argv[])
     int seqLen = strlen(seq) - 1;
     int subLen = strlen(sub) - 1;
 
-    /* Debug */
-    printf("seq: %i\nsub: %i\n", seqLen, subLen);
-
     /* For every character in the sequence string */
-    for (int i=0; i < seqLen; i++)
-    //for (int i=0; i < (seqLen - subLen +1); i++)
+    //for (int i=0; i < seqLen; i++)
+    for (int i=0; i < (seqLen - subLen +1); i++)
     {
         /* For every character in the substring */
         for (int j=0; j < (subLen); j++)
         {
-            printf("%c %i %c %i\n", seq[i+j], i+j, sub[j], j);       /* Debug */
-
             /* Check if the characters are equal */
             if (sub[j] != seq[i+j])
             {
-                printf("Break\n");
                 /* Exit the loop */
                 break;
             }
             /* If the characters are all equal including the last one */
-            else if ((subLen) == j)
+            else if ((subLen - 1) == j)
             {
                 /* Print the number of the first character of the string */
                 printf("%i ", (i+1));
